@@ -1,0 +1,77 @@
+.log-item.info {
+  border-left: 4px solid #4db8ff;
+}
+.log-item.warn {
+  border-left: 4px solid #ffcc00;
+  background: #3a3520;
+}
+.log-item.error {
+  border-left: 4px solid #ff5555;
+  background: #3a2020;
+}
+
+.log-time {
+  font-size: 0.7rem;
+  color: #888;
+  float: right;
+}
+
+.log-content {
+  padding-left: 15px;
+  color: #ce9178;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+
+
+.json-key { color: #9cdcfe; font-weight: bold; } 
+.json-string { color: #ce9178; }              
+.json-number { color: #b5cea8; }              
+.json-boolean { color: #569cd6; }             
+
+pre {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.5;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', monospace;
+  border: 1px solid #333;
+}
+
+
+/*  */
+
+
+details {
+  background: #252526;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid #3c3c3c;
+}
+
+summary {
+  cursor: pointer;
+  color: #4db8ff;
+  font-weight: bold;
+  outline: none;
+  user-select: none;
+  padding: 5px;
+}
+
+summary:hover {
+  color: #82ccff;
+}
+
+/* Иконка стрелочки перед текстом */
+summary::marker {
+  color: #ce9178;
+}
+
+pre {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+}
