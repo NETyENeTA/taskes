@@ -1,77 +1,144 @@
-.log-item.info {
-  border-left: 4px solid #4db8ff;
-}
-.log-item.warn {
-  border-left: 4px solid #ffcc00;
-  background: #3a3520;
-}
-.log-item.error {
-  border-left: 4px solid #ff5555;
-  background: #3a2020;
-}
-
-.log-time {
-  font-size: 0.7rem;
-  color: #888;
-  float: right;
+:root {
+  --bg-main: #1e1e1e;
+  --bg-card: #252526;
+  --accent: #007acc;
+  --text: #d4d4d4;
+  --key: #9cdcfe;
+  --string: #ce9178;
+  --number: #b5cea8;
+  --border: #3c3c3c;
 }
 
-.log-content {
-  padding-left: 15px;
-  color: #ce9178;
-  white-space: pre-wrap;
-  word-break: break-all;
+body {
+  background-color: var(--bg-main);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-main);
+  padding: 15px 0;
+  border-bottom: 2px solid var(--border);
 
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-.json-key { color: #9cdcfe; font-weight: bold; } 
-.json-string { color: #ce9178; }              
-.json-number { color: #b5cea8; }              
-.json-boolean { color: #569cd6; }             
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
 
-pre {
-  background: #1e1e1e;
-  padding: 15px;
+.controls button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.controls button:hover {
+  background: #0062a3;
+}
+.controls button.secondary {
+  background: #444;
+}
+
+#logimaster {
+  width: 100%;
+  max-width: 900px;
+  background: var(--bg-card);
   border-radius: 8px;
-  line-height: 1.5;
-  color: #d4d4d4;
-  font-family: 'Consolas', 'Monaco', monospace;
-  border: 1px solid #333;
+  border: 1px solid var(--border);
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Стили логов */
+.log-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
 
-/*  */
-
+.log-item:last-child {
+  border: none;
+}
 
 details {
-  background: #252526;
+  background: #1a1a1a;
   border-radius: 6px;
-  padding: 5px 10px;
-  margin: 5px 0;
-  border: 1px solid #3c3c3c;
+  border: 1px solid var(--border);
+  margin-top: 5px;
 }
 
 summary {
+  padding: 10px;
   cursor: pointer;
-  color: #4db8ff;
+  color: var(--accent);
   font-weight: bold;
-  outline: none;
-  user-select: none;
-  padding: 5px;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-summary:hover {
-  color: #82ccff;
+summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.8rem;
+  transition: 0.2s;
 }
 
-/* Иконка стрелочки перед текстом */
-summary::marker {
-  color: #ce9178;
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 pre {
-  margin-top: 10px;
-  border: none;
-  background: transparent;
+  margin: 0;
+  padding: 15px;
+  overflow-x: auto;
+  font-family: "Consolas", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Подсветка синтаксиса */
+.json-key {
+  color: var(--key);
+}
+.json-string {
+  color: var(--string);
+}
+.json-number {
+  color: var(--number);
+}
+.json-boolean {
+  color: #569cd6;
+}
+
+.tag {
+  font-size: 0.7rem;
+  background: #444;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: #bbb;
 }

@@ -1,8 +1,3 @@
-
-
-
-
-
 const tasks = [
   {
     id: 1,

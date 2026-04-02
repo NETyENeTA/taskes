@@ -1,18 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./style.css" rel="stylesheet">
-    <link href="./logStyled.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./logStyled.css" rel="stylesheet" />
     <title>Document</title>
-</head>
-<body>
+  </head>
 
+  <header>
+    <h1>Logger 1.0</h1>
+    <div class="controls">
+      <button class="secondary" onclick="toggleAll(false)">Свернуть всё</button>
+      <button onclick="toggleAll(true)">Раскрыть всё</button>
+    </div>
+  </header>
+  <body>
     <div id="logimaster"></div>
-
 
     <script type="text/javascript" src="./logister.js"></script>
     <script type="text/javascript" src="./script.js"></script>
-</body>
+  </body>
 </html>
