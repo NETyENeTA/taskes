@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-header {
+/* header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -34,7 +34,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
+} */
 
 h1 {
   margin: 0;
@@ -141,4 +141,34 @@ pre {
   border-radius: 10px;
   margin-left: 10px;
   color: #bbb;
+}
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 110%;
+    margin-bottom: 50px;
+    background-color: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Класс, который добавит JS при скролле */
+.header-scrolled {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom-color: var(--accent);
+}
+
+/* Внутренний контент шапки (ограничен по ширине) */
+.header {
+    width: 100%;
+    max-width: 900px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

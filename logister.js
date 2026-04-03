@@ -50,3 +50,13 @@ function highlightJson(json) {
 function toggleAll(open) {
   document.querySelectorAll("details").forEach((d) => (d.open = open));
 }
+
+// needs for animations
+const header = document.getElementById('sticky-header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+});
